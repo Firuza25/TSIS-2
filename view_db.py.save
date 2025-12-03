@@ -1,0 +1,15 @@
+import sqlite3
+import pandas as pd
+
+
+from pathlib import Path
+
+DB_PATH = Path(__file__).resolve().parent / "data" / "output.db"
+TABLE_NAME = "news"
+
+conn = sqlite3.connect(DB_PATH)
+df = pd.read_sql_query(f"SELECT * FROM {TABLE_NAME}", conn)
+conn.close()
+
+print(df.head(20))
+print(f"\nВсего записей в таблице: {len(df)}")

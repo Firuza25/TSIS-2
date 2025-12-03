@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+venv/
+.env/
+
+# Airflow
+airflow.db
+*.log
+
+# Data
+data/raw_tengri.csv
+data/clean_tengri.csv
+data/output.db
+
+# OS
+.DS_Store
+Thumbs.db
