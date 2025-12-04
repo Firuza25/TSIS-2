@@ -23,3 +23,27 @@ Before running the scraper, make sure you have installed all necessary dependenc
 
 ```bash
 pip install -r requirements.txt
+```
+### Run the Scraper Manually
+
+If you prefer to run the scraper manually to collect the latest data from Tengrinews.kz, follow these steps:
+
+1. Open a terminal and navigate to the project directory.
+2. Ensure you have all dependencies installed by running:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Run the scraper script with the following command:
+
+    ```bash
+    python src/scraper.py
+    ```
+
+#### What this does:
+- The script opens a headless browser (via Selenium) to scrape data from various sections of the Tengrinews website (e.g., Kazakhstan, World, Crime, Science).
+- It collects news articles and saves them in a CSV file: `data/raw_tengri.csv`.
+- The scraper handles dynamic content loading, ensuring that only the most up-to-date articles are captured.
+
+Once the script finishes running, you can check the `data/raw_tengri.csv` file for the raw scraped data.
